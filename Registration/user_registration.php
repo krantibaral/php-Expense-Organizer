@@ -42,7 +42,7 @@ if(isset($check)){
  else{
  
     // Creating SQL query and insert the record into MySQL database table.
-    $Sql_Query = "insert into user_registration (name,email,password) values ('$name','$email','$password')";
+    $Sql_Query = "insert into kranti (name,email,password) values ('$name','$email','$password')";
     
     
     if(mysqli_query($con,$Sql_Query)){
@@ -59,9 +59,8 @@ if(isset($check)){
     }
     else{
     
-       echo 'Try Again';
-    
+    echo 'Try Again';
+    echo mysqli_error(($con)) ;
     }
 }
 mysqli_close($con);
-?>

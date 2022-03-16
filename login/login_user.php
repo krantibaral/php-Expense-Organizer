@@ -12,10 +12,11 @@ header("Access-Control-Allow-Headers: X-Requested-With");
   //creating mysql connection
   $con = mysqli_connect($HostName, $HostUser, $HostPass, $DatabaseName);
   //storing the recived json into $json variable
-  //$json = file_get_contents('php://input');
+  $json = file_get_contents('php://input');
   //decoded the recived json into and store into $obj variable
-  //$obj = json_decode($json, true);
-  $obj = $_POST;
+  $obj = json_decode($json, true);
+//   print_r($_POST) ;
+//   $obj = $_POST;
   //getting name from $obj object
   $name = $obj['name'];
   $password = $obj['password'];
