@@ -1,4 +1,5 @@
 <?php 
+header('Access-Control-Request-Headers: Content-Type');
 header('Access-Control-Allow-Origin: *');
 
 header('Access-Control-Allow-Methods: GET, POST');
@@ -23,7 +24,7 @@ header("Access-Control-Allow-Headers: X-Requested-With");
   $loginQuery = "select * from kranti where name = '$name' and password = '$password' ";
   $check = mysqli_fetch_array(mysqli_query($con, $loginQuery));
   if (isset($check)){
-      $onLoginSuccess = "Login Matched";
+      $onLoginSuccess = 'Login Matched';
       $SuccessMSG = json_encode($onLoginSuccess);
       echo $SuccessMSG;
   }

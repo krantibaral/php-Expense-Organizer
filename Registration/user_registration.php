@@ -1,8 +1,7 @@
 <?php
+header('Access-Control-Request-Headers: Content-Type');
 header('Access-Control-Allow-Origin: *');
-
 header('Access-Control-Allow-Methods: GET, POST');
-
 header("Access-Control-Allow-Headers: X-Requested-With");
 //defining server host name
 $HostName = "localhost";
@@ -64,3 +63,4 @@ if(isset($check)){
     }
 }
 mysqli_close($con);
+?>
