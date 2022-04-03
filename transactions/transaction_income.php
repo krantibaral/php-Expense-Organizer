@@ -17,7 +17,8 @@ header("Access-Control-Allow-Headers: X-Requested-With");
   $obj = json_decode($json, true);
  
   //$sql = "SELECT * FROM addexpense";
-  $sql = "SELECT * FROM addincome";
+  //$sql = "SELECT * FROM addincome";
+  $sql = "SELECT Amount, Category, Date, Type FROM addincome UNION SELECT Amount, Category, Date, Type From addexpense";
        $result = mysqli_query($con, $sql);
        $tasks = array();
        if(mysqli_num_rows($result)>0){
@@ -40,6 +41,7 @@ header("Access-Control-Allow-Headers: X-Requested-With");
            );
            echo json_encode($response);
        }
+       
       
    
   
