@@ -16,9 +16,8 @@ header("Access-Control-Allow-Headers: X-Requested-With");
   $json = file_get_contents('php://input');
   $obj = json_decode($json, true);
  
-  //$sql = "SELECT * FROM addexpense";
-  //$sql = "SELECT * FROM addincome";
-  $sql = "SELECT Amount, Category, Date, Type FROM addincome UNION SELECT Amount, Category, Date, Type From addexpense";
+ 
+  $sql = "SELECT Amount, Category, Date, Description, Type FROM addincome UNION SELECT Amount, Category, Date, Description, Type From addexpense";
        $result = mysqli_query($con, $sql);
        $tasks = array();
        if(mysqli_num_rows($result)>0){
@@ -41,6 +40,24 @@ header("Access-Control-Allow-Headers: X-Requested-With");
            );
            echo json_encode($response);
        }
+
+ // break;
+ // //Update transactions
+ // case 'PUT':
+ //  $json = file_get_contents('php://input');
+ //  $date = json_decode($json, true);
+
+ //  if (is_null($data)){
+ //      $response = array(
+ //          'status' => false,
+ //          'msg' => 'Empty Fields'
+ //      );
+ //      echo json_encode($response);
+ //      
+ //  }else{
+ //      $sql = "UPDATE "
+ //  }
+
        
       
    
