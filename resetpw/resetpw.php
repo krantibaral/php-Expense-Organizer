@@ -24,8 +24,8 @@ $password = $_POST["password"];
 
 $response = array();
 $sql = "SELECT email FROM password_resets WHERE token=$token LIMIT 1";
-$db = mysqli_connect('localhost', 'root', '', 'kranti');
-$results = mysqli_query($db, $sql);
+//$db = mysqli_connect('localhost', 'root', '', 'kranti');
+$results = mysqli_query($con, $sql);
 $email = mysqli_fetch_assoc($results)['email'];
 
 
