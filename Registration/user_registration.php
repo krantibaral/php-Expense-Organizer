@@ -24,7 +24,7 @@ $email = $obj['email'];
 ////getting pw from $obj object
 $password = $obj['password'];
 // checking whether email is  already exist or not in mysql table
-$CheckSQL = "SELECT * FROM kranti WHERE email='$email'";
+$CheckSQL = "SELECT * FROM users WHERE email='$email'";
 //executing email check mysql query
 $check = mysqli_fetch_array(mysqli_query($con,$CheckSQL));
 if(isset($check)){

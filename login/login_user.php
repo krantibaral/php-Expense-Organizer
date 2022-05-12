@@ -21,7 +21,7 @@ header("Access-Control-Allow-Headers: X-Requested-With");
   //getting name from $obj object
   $name = $obj['name'];
   $password = $obj['password'];
-  $loginQuery = "select * from kranti where name = '$name' and password = '$password' ";
+  $loginQuery = "select * from users where name = '$name' and password = '$password' ";
   $check = mysqli_fetch_array(mysqli_query($con, $loginQuery));
   if (isset($check)){
     echo json_encode(['status' => 'success', 'user' => $check]) ;
