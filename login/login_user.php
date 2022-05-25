@@ -7,7 +7,7 @@ header('Access-Control-Allow-Methods: GET, POST');
 header("Access-Control-Allow-Headers: X-Requested-With");
 
   $HostName = "localhost";
-  $DatabaseName = "kranti";
+  $DatabaseName = "kranti_fyp";
   $HostUser = "root";
   $HostPass = "";
   //creating mysql connection

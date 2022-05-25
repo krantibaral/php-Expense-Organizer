@@ -6,7 +6,7 @@ header("Access-Control-Allow-Headers: X-Requested-With");
 //defining server host name
 $HostName = "localhost";
 //defining database name
-$DatabaseName = "kranti";
+$DatabaseName = "kranti_fyp";
 //defining database user name 
 $HostUser = "root";
 //defining database pw
@@ -41,7 +41,7 @@ if(isset($check)){
  else{
  
     // Creating SQL query and insert the record into MySQL database table.
-    $Sql_Query = "insert into kranti (name,email,password) values ('$name','$email','$password')";
+    $Sql_Query = "insert into users (name,email,password) values ('$name','$email','$password')";
     
     
     if(mysqli_query($con,$Sql_Query)){

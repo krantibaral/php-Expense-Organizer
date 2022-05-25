@@ -6,7 +6,7 @@ header("Access-Control-Allow-Headers: X-Requested-With");
 
 $HostName = "localhost";
 
-$DatabaseName = "kranti";
+$DatabaseName = "kranti_fyp";
 
 $HostUser = "root";
 
